@@ -1,6 +1,6 @@
 # Baurne Again Media Downloading Script
 
-Welcome to the Barune Again Media Downloading Script! This script is designed to help beginners download videos easily using the command line in Linux. No advanced knowledge is needed—just a few straightforward commands!
+Welcome to the Baurne Again Media Downloading Script! This script is designed to help beginners download videos easily using the command line in Linux. No advanced knowledge is needed—just a few straightforward commands!
 
 ## Features
 
