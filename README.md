@@ -111,3 +111,11 @@ Here are some simple examples of how to use the script:
 If you have any questions or need help, feel free to open an issue in this repository or leave a comment.
 
 Happy downloading! 🎉
+
+---
+
+## Currently supporting downloads from
+
+- **Youtube** (next update will include ability to download play-lists)
+
+- **Pinterest** (you need the browser url not the shortened version offered by pinterest app. If you have the link to a pin from the app ? paste it on the browser and then copy the new link from the browser address bar.)
