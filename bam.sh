@@ -13,5 +13,16 @@ else echo -e "The package ffmpeg is required for the script to work.\nInitiaing 
 sudo apt install ffmpeg
 fi
 yt-dlp --version
-sudo apt autoremove ffmpeg
-rm ~/.local/bin/yt-dlp
+#yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'
+#yt-dlp --verbose "$1"
+case $1 in
+"1080p-video")
+echo "1080p Video Download Requested by the user"
+yt-dlp --no-playlist --paths "~/Downloads/Videos" -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' "$2";;
+"mp3")
+echo "MP3 Conversion of video requested";;
+*)
+echo "Default mode no-selection best quality"
+yt-dlp --no-playlist --paths "~/Downloads/Videos" "$1";;
+esac
+
