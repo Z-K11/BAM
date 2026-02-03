@@ -22,6 +22,9 @@ yt-dlp --no-playlist --paths "~/Downloads/Videos" -f 'bestvideo[height<=1080]+be
 "720p-video")
 echo "720p Video Download Requested by the user"
 yt-dlp --no-playlist --paths "~/Downloads/Videos" -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' "$2";;
+"480p-video")
+echo "480p Video Download Requested by the user"
+yt-dlp --no-playlist --paths "~/Downloads/Videos" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' "$2";;
 "mp3")
 echo "MP3 Conversion of video requested";;
 *)
