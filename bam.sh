@@ -13,11 +13,6 @@ else echo -e "The package ffmpeg is required for the script to work.\nInitiaing 
 sudo apt install ffmpeg
 fi
 yt-dlp --version
-# If you want to use your own custom resolution here is the command
-# that just sets the resolution of the video you can append a url at
-# the end enclosed by quotations
-#yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'
-#yt-dlp --verbose "$1"
 case $1 in
 "1080p-video")
 echo "1080p Video Download Requested by the user"
@@ -30,11 +25,7 @@ echo "480p Video Download Requested by the user"
 yt-dlp --no-playlist --verbose --paths "$HOME/Downloads/Videos" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' "$2";;
 "mp3")
 echo "MP3 Conversion of video requested"
-yt-dlp --no-playlist --verbose --paths "$HOME/Downloads/Videos/mp3" -f bestaudio -o '%(title)s.%(ext)s' "$2"
-video=$(yt-dlp --no-playlist --paths "$HOME/Downloads/Videos/mp3" -f bestaudio -o '%(title)s.%(ext)s' "$2" --get-filename)
-echo "File name = $video"
-ffmpeg -i "$video" -q:a 0 "${video%.*}.mp3"
-rm "$video" ;;
+yt-dlp --no-playlist --verbose --paths "$HOME/Downloads/mp3" -f bestaudio --exec 'video={}; ffmpeg -i "$video" -q:a 0 "${video%.*}.mp3";rm "$video"' "$2";;
 *)
 echo "Default mode no-selection best quality"
 yt-dlp --no-playlist --paths "$HOME/Downloads/Videos" "$1";;
