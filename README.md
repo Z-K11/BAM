@@ -37,7 +37,19 @@ Before you use this script, make sure you have:
 
 3. **Run the Script:**
    You can run the script with different options depending on what you want to do.
+   
+   ### Download a video from instagram
+   
+   To download a video from instagram, use the following syntax:
+   ```./bam.sh insta [your-browser-name] [video_url]```
 
+   Replace `[your-browser-name]` with the name of your webrowser such as `chrome` or in my case `firefox`.
+   **Note** your instagram account must be **signed-in** in the browser you specify as the parameter in command to download a story from instagram.
+   Normal instagram videos can be downloaded by just using the default behavior like
+
+   ```./bam.sh https://www.instagram.com/p/DUjKOvnkywGE6COSfGGrw-603rhn48zXNJ8Lt00/```
+
+   
    ### Download a Video in High Resolution
 
    To download a video at 1080p, 720p, or 480p, use the following syntax:
@@ -116,6 +128,9 @@ Happy downloading! 🎉
 
 ## Currently supporting downloads from
 
-- **Youtube** (next update will include ability to download play-lists)
+- **Youtube** 
 
 - **Pinterest** (you need the browser url not the shortened version offered by pinterest app. If you have the link to a pin from the app ? paste it on the browser and then copy the new link from the browser address bar.)
+
+- **Instagram** (You need to have your account signed in the browser you specify when pasting instagram story links regular post content could already be downloaded 
+by just pasting the url without passing any other arguement to the script.)
