@@ -26,6 +26,9 @@ yt-dlp --no-playlist --verbose --paths "$HOME/Downloads/Videos" -f 'bestvideo[he
 "mp3")
 echo "MP3 Conversion of video requested"
 yt-dlp --no-playlist --verbose --paths "$HOME/Downloads/mp3" -f bestaudio --exec 'video={}; ffmpeg -i "$video" -q:a 0 "${video%.*}.mp3";rm "$video"' "$2";;
+"insta")
+echo "Instagram content download requested"
+yt-dlp --verbose --no-playlist --cookies-from-browser "$2" --paths "$HOME/Downloads/Videos" "$3";;
 *)
 echo "Default mode no-selection best quality"
 yt-dlp --no-playlist --paths "$HOME/Downloads/Videos" "$1";;
